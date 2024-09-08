@@ -1,11 +1,11 @@
-# `RPWBA` Reverse Proxy (with basic auth)
+# `STONE-RPWBA` Reverse Proxy (with basic auth)
 
 ## Local installation
 
 Start by building the image:
 
 ```commandline
-$ docker build {{build-args}} -t stonebase-rpwba .
+$ docker build {{build-args}} -t stone-rpwba .
 ```
 * Required Build Args:
   * `--build-arg OPTS_PROXY_PASS=...` one or multiple service private network urls. If regusting several urls, separate them with `;` (e.g., `http://...:8080;http://...:8888`).
@@ -31,10 +31,10 @@ $ docker run -d \
   -e ENABLE_ALPINE_PRIVATE_NETWORKING=true \
   --name stonebase-rpwba \
   -p 8910:8910 \
-  stonebase-rpwba
+  stone-rpwba
 ```
-* Stop: `docker stop /stonebase-rpwba`
-* Remove: `docker rm /stonebase-rpwba`
+* Stop: `docker stop /stone-rpwba`
+* Remove: `docker rm /stone-rpwba`
 
 ## Railway 
 
