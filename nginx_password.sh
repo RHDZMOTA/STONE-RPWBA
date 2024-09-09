@@ -1,10 +1,10 @@
 #!/bin/sh
 
-USER=${USERNAME}
-PWD=${PASSWORD}
+USERNAME=${OPT_USERNAME}
+PASSWORD=${OPT_PASSWORD}
 
-echo "Generating password for user ${USER}"
+echo "Generating password for username ${USERNAME}"
 
-CRYPTPWD=`openssl passwd -apr1 ${PWD}`
+CRYPTPWD=`openssl passwd -apr1 ${PASSWORD}`
 
-echo "${USER}:${CRYPTPWD}" >> /etc/nginx/.htpasswd
+echo "${USERNAME}:${CRYPTPWD}" >> /etc/nginx/.htpasswd
